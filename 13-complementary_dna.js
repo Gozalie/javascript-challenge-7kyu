@@ -53,3 +53,4 @@ function dnaStrand(dna) {
 
 console.log(dnaStrand("ATTGC"));
 console.log(dnaStrand("TTTAAAAACCCCGGGG"));
+console.log(dnaStrand("TTTTT"));
