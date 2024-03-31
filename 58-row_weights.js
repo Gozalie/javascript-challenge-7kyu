@@ -18,16 +18,16 @@ The first element 62 is the total weight of team 1, and the second element 27 is
 */
 
 /* answer */
-const rowWeights = (array) => {
-  let result = [0, 0];
-  for (let i = 0; i < array.length; i++) {
-    i % 2 === 0 ? (result[0] += array[i]) : (result[1] += array[i]);
-  }
-  return result;
-};
+// const rowWeights = (array) => {
+//   let result = [0, 0];
+//   for (let i = 0; i < array.length; i++) {
+//     i % 2 === 0 ? (result[0] += array[i]) : (result[1] += array[i]);
+//   }
+//   return result;
+// };
 
 // const rowWeights = (array) => [array.map((a, i) => (i % 2 === 0 ? a : 0)).reduce((a, b) => a + b, 0), array.map((a, i) => (i % 2 === 1 ? a : 0)).reduce((a, b) => a + b, 0)];
 
-// const rowWeights = (array) => array.reduce((a, b, i) => ((a[i % 2] += b), a), [0, 0]);
+const rowWeights = (array) => array.reduce((a, b, i) => ((a[i % 2] += b), a), [0, 0]);
 
 console.log(rowWeights([50, 60, 70, 80]));
